@@ -60,5 +60,10 @@
             </plugin>
         </plugins>
     </build>
-         
+         <distributionManagement>
+        <repository>
+              <id>myrepository</id>
+              <url>file:D:/repository/</url>
+        </repository>
+      </distributionManagement>
 </project>
