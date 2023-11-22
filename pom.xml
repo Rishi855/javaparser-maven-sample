@@ -28,14 +28,7 @@
         </dependency>
     </dependencies>
 
-   <filters>
-            <filter>
-               <artifact>org.example:*</artifact>
-               <excludes>
-                  <exclude>META-INF/*.MF</exclude>
-               </excludes>
-            </filter>
-   </filters>
+
          
     <!-- This blob of configuration tells Maven to make the jar executable. You can run it with:
     mvn clean package
@@ -59,6 +52,7 @@
                                         implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <mainClass>com.yourorganization.maven_sample.LogicPositivizer</mainClass>
                                 </transformer>
+                                     <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer" />
                             </transformers>
                         </configuration>
                     </execution>
